@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html> 
+<html lang="bg-BG"> 
+<head> 
+    <meta charset="UTF-8" /> 
+    <title>Project Manov ^.^</title> 
+	
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+ 
+
+ <script>
+	function movee(divid){
+$("#"+divid).css({"transform": "rotateY(0deg)"});
+l = Math.random()*1200;
+ll = l+"px"; 
+tt = Math.random()*600+"px";
+if( parseInt($("#"+divid).css('left'))<l){
+$("#"+divid).css({"transform": "rotateY(180deg)"});
+
+}
+$("#"+divid).animate({left:ll,top:tt},Math.random()*500+500,function(){movee(divid);});
+}
+ $(document).ready(function(){movee("mydiv1");movee("mydiv2");movee("mydiv3");movee("mydiv4");movee("mydiv5");});
+	
+	$(document).ready(function(e){
+    $("#container").click(function(e){
+	     
+        $("#mydiv1,#mydiv2,#mydiv3,#mydiv4,#mydiv5").animate({left:(e.pageX-110)+"px", top:(e.pageY-110)+"px"},3000),5000
+		    ;
+        
+    
+});
+
+		
+		
+    });
+
+
+
+ 
+	
+
+</script>
+
+
+    <style> 
+    body{ 
+        padding:0px; 
+        margin:0px; 
+        background-color:white; 
+    } 
+    #container{ 
+    width:1500px; 
+        height:800px; 
+        background-image:url("https://i.pinimg.com/originals/ec/f2/ff/ecf2ffff333f1721740a0fa460130585.jpg");
+        
+    } 
+    
+    #mydiv1{ 
+    
+	}
+    #mydiv2{ 
+         
+    } 
+    #mydiv3{ 
+       
+    } 
+	 #mydiv4{ 
+
+       
+    } 
+	 #mydiv5{ 
+          
+
+   
+    } 
+
+    </style> 
+</head> 
+<body> 
+
+
+<div id="container"> 
+
+<div  id="mydiv1" style="width:50;height:50; position:absolute;"><img src="https://clipart.info/images/ccovers/1484942364ios-emoji-fish.png"></div>
+<div id="mydiv2" style="width:50px;height:50px;position:absolute;"><img src="https://clipart.info/images/ccovers/1484942364ios-emoji-fish.png"></div>
+<div  id="mydiv3" style="width: 50px; height: 50px;  position: absolute;left: 600.72px; top: 680.480px;"><img src="https://clipart.info/images/ccovers/1484942364ios-emoji-fish.png"></div>
+<div  id="mydiv4" style="width: 50px; height: 50px; position: absolute;  left: 550.72px; top: 680.480px;"><img src="https://clipart.info/images/ccovers/1484942364ios-emoji-fish.png"></div>
+<div  id="mydiv5" style="width: 50px; height: 50px;  position: absolute;  left:590.72px; top: 500.480px;"><img src="https://clipart.info/images/ccovers/1484942364ios-emoji-fish.png"></div>
+
+</div> 
+
+</body> 
+</html>
